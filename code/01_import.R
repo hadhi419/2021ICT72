@@ -1,3 +1,12 @@
+install.packages("BiocManager")
+
+
+BiocManager::install(
+  c("GEOquery", "Biobase", "limma"),
+  ask = FALSE,
+  update = FALSE
+)
+
 library(GEOquery)
 
 dir.create("data", showWarnings = FALSE)
