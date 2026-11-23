@@ -71,8 +71,8 @@ Principal component analysis (PCA) was performed on the log₂-transformed
 expression values for the 20 samples. Each point represents one sample.
 Colour indicates tissue type (roots or shoots), and shape indicates
 condition (spaceflight or ground control). The first principal component
-(PC1) explained [PC1]% of the total variation, and the second principal
-component (PC2) explained [PC2]%.
+(PC1) explained 46.7% of the total variation, and the second principal
+component (PC2) explained 6.6%.
 
 ![PCA of log2 expression in roots and shoots](figures/pca_log2.png)
 
