@@ -76,8 +76,6 @@ component (PC2) explained [PC2]%.
 
 ![PCA of log2 expression in roots and shoots](figures/pca_log2.png)
 
-![Flight and ground expression for the three top-ranked probes](figures/top_probe_responses.png)
-
 ### Tissue-specific response to spaceflight
 
 The plate-level limma analysis tested 22,810 microarray probes for
