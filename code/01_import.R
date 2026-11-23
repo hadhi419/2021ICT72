@@ -9,16 +9,17 @@ BiocManager::install(
 
 library(GEOquery)
 
-dir.create("data", showWarnings = FALSE)
+matrix_file <- "data/GSE56659_series_matrix.txt.gz"
 
-# Download the processed expression matrices from NCBI GEO.
-datasets <- getGEO("GSE56659", GSEMatrix = TRUE, destdir = "data")
+if (!file.exists(matrix_file)) {
+  stop("Place the downloaded .txt.gz file in the data folder under ", getwd())
+}
 
-# Show each downloaded matrix and how many samples it contains.
-print(data.frame(
-  matrix = names(datasets),
-  samples = vapply(datasets, ncol, integer(1))
-))
+dataset <- GEOquery::getGEO(filename = matrix_file, getGPL = FALSE)
+
+# 02_explore.R expects a list of datasetas.
+datasets <- list(GSE56659 = dataset)
+saveRDS(datasets, "data/GSE56659.rds")
 
 # Print the accession and title for each sample.
 for (dataset in datasets) {
